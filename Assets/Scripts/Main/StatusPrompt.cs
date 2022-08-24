@@ -10,12 +10,11 @@ namespace ThirdPartyTest.Main
 
         private void Update()
         {
+            var unityServicesState = Unity.Services.Core.UnityServices.State;
+            
             _promptTextEvent.Invoke(
                 "Status\n" +
-                "Something\n" +
-                // ReSharper disable once StringLiteralTypo
-                "Long\n" +
-                "Text");
+                $"Unity Services: {unityServicesState}");
         }
     }
 }
